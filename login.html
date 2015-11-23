@@ -19,15 +19,19 @@
 
         <!-- Login -->
         <div class="lc-block" id="l-login" data-ng-class="{ 'toggled': lctrl.login === 1 }" data-ng-if="lctrl.login === 1">
+          <div class="alert alert-info">
             <p class="text-center">
               WARNING!<br/>
             </p>
+
             <p class="text-left">
-              This system contains government information.
-              By accessing and using this computer system, you are consenting to system monitoring for law enforcement and other purposes.
-              Unauthorized use of, or access to, this computer system may subject you to State and Federal criminal prosecution and penalties, as well as civil penalties.<br/>
+              This system contains government information. By accessing and using this computer system, you are consenting to system monitoring for law enforcement and other purposes.
+              Unauthorized use of, or access to, this computer system may subject you to State and Federal criminal prosecution and penalties, as well as civil penalties.
+            </p>
+            <p class="text-left">
               All systems are monitored by User ID.
             </p>
+          </div>
 
             <div class="input-group m-b-20">
                 <span class="input-group-addon"><i class="zmdi zmdi-account"></i></span>
@@ -53,7 +57,7 @@
                 </label>
             </div>
 
-            <a href="" class="btn btn-login btn-danger btn-float"><i class="zmdi zmdi-arrow-forward"></i></a>
+            <a href="index.html" class="btn btn-login btn-danger btn-float"><i class="zmdi zmdi-arrow-forward"></i></a>
 
             <ul class="login-navigation">
                 <!-- <li data-block="#l-register" class="bgm-red" data-ng-click="lctrl.login = 0; lctrl.register = 1">Register</li> -->
