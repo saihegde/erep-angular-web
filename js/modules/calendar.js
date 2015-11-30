@@ -1,4 +1,4 @@
-materialAdmin 
+materialAdmin
 
     // =========================================================================
     // CALENDAR WIDGET
@@ -16,52 +16,52 @@ materialAdmin
                         center: 'prev, title, next',
                         left: ''
                     },
-                    defaultDate: '2014-06-12',
+                    defaultDate: '2015-07-12',
                     editable: true,
                     events: [
                         {
-                            title: 'All Day',
-                            start: '2014-06-01',
+                            title: 'Freedom',
+                            start: '2015-07-04',
                             className: 'bgm-cyan'
                         },
                         {
-                            title: 'Long Event',
-                            start: '2014-06-07',
-                            end: '2014-06-10',
+                            title: 'Never Ending Scrum Meetings',
+                            start: '2015-07-07',
+                            end: '2015-07-10',
                             className: 'bgm-orange'
                         },
                         {
                             id: 999,
-                            title: 'Repeat',
-                            start: '2014-06-09',
+                            title: 'All Hands',
+                            start: '2015-07-09',
                             className: 'bgm-lightgreen'
                         },
                         {
                             id: 999,
                             title: 'Repeat',
-                            start: '2014-06-16',
+                            start: '2015-07-16',
                             className: 'bgm-blue'
                         },
                         {
                             title: 'Meet',
-                            start: '2014-06-12',
-                            end: '2014-06-12',
+                            start: '2015-07-12',
+                            end: '2015-07-12',
                             className: 'bgm-teal'
                         },
                         {
                             title: 'Lunch',
-                            start: '2014-06-12',
+                            start: '2015-07-12',
                             className: 'bgm-gray'
                         },
                         {
                             title: 'Birthday',
-                            start: '2014-06-13',
+                            start: '2015-07-13',
                             className: 'bgm-pink'
                         },
                         {
-                            title: 'Google',
-                            url: 'http://google.com/',
-                            start: '2014-06-28',
+                            title: 'Erep Webinar',
+                            url: 'http://utah.gov/',
+                            start: '2015-07-28',
                             className: 'bgm-bluegray'
                         }
                     ]
@@ -69,7 +69,7 @@ materialAdmin
             }
         }
     })
-    
+
 
     // =========================================================================
     // MAIN CALENDAR
@@ -83,7 +83,7 @@ materialAdmin
                 actionLinks: '=',
             },
             link: function(scope, element, attrs) {
-                
+
                 var date = new Date();
                 var d = date.getDate();
                 var m = date.getMonth();
@@ -187,19 +187,19 @@ materialAdmin
                     //On Day Select
                     select: function(start, end, allDay) {
                         scope.select({
-                            start: start, 
+                            start: start,
                             end: end
                         });
                     }
                 });
-                
-                  
+
+
                 //Add action links in calendar header
                 element.find('.fc-toolbar').append($compile(scope.actionLinks)(scope));
             }
         }
     })
-    
+
 
     //Change Calendar Views
     .directive('calendarView', function(){
@@ -207,9 +207,8 @@ materialAdmin
             restrict: 'A',
             link: function(scope, element, attrs) {
                 element.on('click', function(){
-                    $('#calendar').fullCalendar('changeView', attrs.calendarView);  
+                    $('#calendar').fullCalendar('changeView', attrs.calendarView);
                 })
             }
         }
     })
-
